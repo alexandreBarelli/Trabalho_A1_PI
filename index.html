@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Alexandre Antônio Barelli">
+
+    <title>Multimarcas - 2 D'OUROS</title> <!-- Título  -->
+    
+    <link href="css/estilo.css" rel="stylesheet" /> <!-- Carrega o CSS -->
+    <link rel="icon" type="image/png" href="images/favicon.png"> <!-- Imagem favicon do logo -->
+</head>
+
+<body>
+    <header> <!-- Área de cabeçalho -->
+
+        <nav> <!-- Área de navegação -->
+            <ul> 
+                <li><a href="#">Início</a></li> <!-- list item - itens da lista -->
+                <li><a href="cadastro.html">Cadastrar Veículo</a></li>
+            </ul>
+            <img src="images/logo_fundo_transparente.png" alt="2 D'OUROS" style="width: 15%; height: 15%;"> <!-- Logo com medidas reduzida e traansparente -->
+        </nav>
+    </header>
+
+
+    <div style="text-align: center;"> <!-- Usado para centralização -->
+        <div>
+            <img src="images/logo_banner.png" alt="2 D'OUROS" style="max-width: 100%; height: auto;"> <!-- Banner com logo -->
+        </div>
+        <div>
+            <h2>Veja abaixo o estoque disponível em nossa loja em Itu</h2>
+        </div>
+    </div>
+
+    <div class="table-container"> <!-- Container para tabela css -->
+        <table id="tabela_veiculos"> <!-- Tabela para exiber dados recuperados -->
+            <thead> <!-- Cabeçalho da tabela -->
+                <tr> 
+                    <th>#</th> <!-- ID -->
+                    <th>Cadastro</th>
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                    <th>Ano</th>
+                    <th>Cor</th>
+                    <th>Preço</th>
+                    <th>Acessorios</th>
+                    <th>Câmbio</th>
+                </tr>
+            </thead>
+            <tbody></tbody> <!-- Exibição de dados gerados pelo javascript -->
+        </table>
+    </div>
+
+    <footer> <!-- Rodapé inicio - usado css para modelar -->
+        <div>
+            <img src="images/logo.png" alt="2 D'OUROS"> 
+        </div>
+        <div>
+            <h3>2 D'OUROSS</h3>
+            <p>MULTIMARCAS</p>
+            <p>Carros semi-novos</p>
+            <p>CNPJ: 62.823.257/0001-09</p>
+        </div>
+        <div>
+            <h3>Endereço:</h3>
+            <p>Rua Avenida Tiradentes, 1211</p>
+            <p>Itu - SP</p>
+            <p>CEP: 13309-640</p>
+        </div>
+        <div>
+            <h3>Contato:</h3>
+            <p>Telefone: (11) 4025-4593</p>
+            <p>Email: vendas@2douros.com.br</p>
+        </div>
+    </footer> <!-- Rodapé fina - usado css para modelar -->
+
+    <script src="js/script.js"></script> <!-- Carregando o JS do projeto -->
+
+    
+
+</body>
+
+</html>

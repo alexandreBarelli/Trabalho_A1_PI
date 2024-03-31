@@ -1,0 +1,205 @@
+/* Estilo CSS do projeto */
+header{background-color: #080b0e;
+    color: white;}
+nav{display: flex; /* Exibe de forma 'flexível' os dados */
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;}
+nav ul {list-style: none; /* Remove a 'bolinha' */
+    margin: 0;
+    padding: 0;}
+nav ul li{
+    display: inline-block; /* Coloca tudo na mesma linha */
+    margin: 8px;}    
+nav ul li a{
+    text-decoration: none; /* Remove o sublinhado do link */
+    color: white;
+    font-weight: bold; /* Negrito */
+    font-size: 14pt;
+    font-family: "Didot", sans-serif; /* Fonte Didot como primeira opção, e sans-serif como segunda opção caso a Arial não esteja disponível */
+}  
+nav ul li a:hover {
+    color: #000;
+    background-color: #CCC;
+    padding: 16px;
+}  
+
+
+body{
+    font-family: sans-serif;
+    margin: 0;
+    padding: 16px;
+    background-image: linear-gradient(to right, #202429, #FFFFFF);
+}
+
+form{
+    max-width: 500px; /* tamanho máximo */
+    margin: 32px auto; /* auto centraliza o conteúdo */
+    border: 1px solid #000;
+    border-radius: 16px; /* cantos arredondados */
+    box-shadow: 0 0 32px rgba(0,0,0,0.5); /* cria um sombreamento */
+    background: rgba(255,255,255,0.80); /* o a é de alpha e indica transparênc.*/
+    display: flex; /* organiza os elementos de forma flexível */
+    flex-direction: column; /* os elementos serão exibidos em colunas */
+    padding: 16px;
+}
+
+input{
+    padding: 8px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.opcoes{
+    flex-direction: row; /* Deixar radio em linha */
+}
+
+label {
+    text-align: left;
+    color: black;
+    font-weight: bold; /* Adiciona negrito ao texto dos labels */
+    font-family: "Verdana", sans-serif; /* Fonte Verdana como primeira opção, e sans-serif como segunda opção caso a Arial não esteja disponível */
+
+
+}
+
+select{
+    padding: 8px;
+    border-radius: 8px;    
+}
+
+.botao{
+    padding: 16px;
+    border: 1px solid #000;
+    border-radius: 8px;
+    color: white;
+    background-color: #007BFF;
+    cursor: pointer;
+    margin-top: 24px;
+    font-size: 14pt;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 16px;
+    color: #000;
+}
+
+/* Estilos padrão para a tabela */
+#tabela_veiculos {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px; /* Adiciona uma margem na parte inferior */
+    border: 1px solid #ddd; /* Adiciona uma borda de 1px com cor cinza claro */
+    border-radius: 5px; /* Adiciona um raio de borda de 5px para cantos arredondados */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra leve */
+    background-color: #fff; /* Define o fundo como branco */
+}
+
+#tabela_veiculos th, #tabela_veiculos td {
+    border: 1px solid #1d1919;
+    padding: 6px;
+    text-align: center;
+    font-family: "Comic Sans MS", sans-serif; /* Fonte Verdana como primeira opção, e sans-serif como segunda opção caso a Arial não esteja disponível */
+
+}
+
+#tabela_veiculos th {
+    background-color: #c4bebe;
+}
+
+/* Estilos para dispositivos móveis */
+
+@media only screen and (max-width: 600px) {
+    /* Redefine a largura da tabela para 100% */
+    #tabela_veiculos {
+        width: 100%;
+    }
+
+    /* Oculta os cabeçalhos da tabela para economizar espaço */
+    #tabela_veiculos th {
+        display: none;
+    }
+
+    /* Estilos para as células da tabela */
+    #tabela_veiculos td {
+        display: block;
+        border: none;
+        border-bottom: 1px solid #1d1919; /* Adiciona uma linha separadora entre as linhas */
+        text-align: left; /* Alinha o texto à esquerda */
+        padding: 8px; /* Adiciona um preenchimento interno de 8px */
+    }
+
+    /* Estilos para as linhas pares da tabela */
+    #tabela_veiculos tr:nth-child(even) {
+        background-color: #f2f2f2; /* Adiciona uma cor de fundo cinza claro em linhas pares */
+    }
+
+    /* Estilos para as linhas ímpares da tabela */
+    #tabela_veiculos tr:nth-child(odd) {
+        background-color: #fff; /* Adiciona uma cor de fundo branco em linhas ímpares */
+    }
+}
+
+    /* Estilos para rodapé */
+
+footer {
+    background-color: #f8f9fa;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+footer div {
+    flex: 1;
+    margin: 0 10px;
+}
+
+footer h3 {
+    margin-bottom: 10px;
+    color: #1f1e1e;
+}
+
+footer p {
+    margin: 5px 0;
+    color: #2c2b2b;
+}
+
+    /* Estilos para rodapé dispositiv */
+
+@media only screen and (max-width: 600px) {
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    footer div {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+/* Define que as colunas ocuparão 50% da largura em telas maiores que 600px */
+.column {
+    float: left;
+    width: 50%;
+}
+
+/* Limpa os floats após as colunas para evitar problemas de layout */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Ajusta o layout para telas menores que 600px */
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%; /* Define que as colunas ocuparão 100% da largura em telas menores que 600px */
+        margin-right: 0; /* Remove a margem entre as colunas */
+        margin-bottom: 10px; /* Adiciona uma margem inferior entre as linhas */
+    }
+}
+
+

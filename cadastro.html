@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Alexandre Antonio Barelli">
+
+    <title>Multimarcas - 2 D'OUROS</title>
+   
+    <link href="css/estilo.css" rel="stylesheet" />  <!-- Carrega o CSS -->
+    <link rel="icon" type="image/png" href="images/favicon.png"> <!-- Imagem favicon logo -->
+</head>
+
+<body>
+
+    <header> <!-- Área de cabeçalho -->
+        <nav> <!-- Área de navegação -->
+            <ul> 
+                <li><a href="index.html">Início</a></li> <!-- list item - itens da lista -->
+                <li><a href="#">Cadastrar Veículo</a></li>
+            </ul>
+            <img src="images/logo_fundo_transparente.png" alt="2 D'OUROS" style="width: 15%; height: 15%;"> <!-- Logo com medidas reduzida e traansparente -->
+        </nav>
+    </header>
+
+    <h1>Cadastro de Veículo</h1>
+
+    <form action="#"> <!-- Início do formulário -->
+        <label for="cadastro">Cadastro em :</label>
+        <input type="date" id="cadastro" name="cadastro" required /> <!-- Input tipo data requirada no html-->
+
+        <label for="marca">Marca:</label>
+        <div class="opcoes">
+            <input type="radio" id="chevrolet" name="marca" value="Chevrolet" checked> <!-- Input tipo radio selecionado no início -->
+            <label for="chevrolet">Chevrolet</label>
+            <input type="radio" id="fiat" name="marca" value="Fiat"> <!-- Input tipo radio  -->
+            <label for="fiat">Fiat</label>
+            <input type="radio" id="ford" name="marca" value="Ford"> <!-- Input tipo radio  -->
+            <label for="ford">Ford</label>
+            <input type="radio" id="volkswagen" name="marca" value="Volkswagen"> <!-- Input tipo radio  -->
+            <label for="volkswagen">Volkswagen</label>
+            <input type="radio" id="outra" name="marca"> <!-- Input tipo radio  -->
+            <label for="outra">Outra</label>
+            <input type="text" id="outraMarca" name="outraMarca" class="maiusculo" placeholder="DIGITE A MARCA" style="display: none;"> <!-- Input tipo texto oculta com definição de letras maiúsculas e exemplo como digitar -->
+        </div>
+
+        <label for="modelo">Modelo:</label>
+        <input type="text" id="modelo" name="modelo" class="maiusculo" placeholder="Ex.: MOBI LIKE 1.0 FLEX 4P" required /> <!-- Input tipo texto com definição de letras maiúsculas, requerido  e exemplo como digitar-->
+
+        <div class="form-group">
+            <label for="cor">Cor:</label>
+            <input type="text" id="cor" name="cor" class="maiusculo" placeholder="Ex.: VERMELHO" required /> <!-- Input tipo text com definição de letras maiúsculas, requerido  e exemplo como digitar-->
+
+            <label for="ano">Ano:</label>
+            <input type="number" id="ano" name="ano" class="ano" min="1900" max="2099" step="1" placeholder="Ex.: aaaa" required  /> <!-- Input tipo número com minimo 1900 e 2088, requerido maximo de 4 digitos e validador js para ser 4 digitos -->
+        </div>
+
+        <label for="valor">Valor (R$):</label>
+        <input type="number" id="valor" name="valor" required min="0" step="0.01" min="0.01" placeholder="Ex.: 35000,00" /> <!-- Input tipo número com minimo 0 (evita inserir valor negativo) e exemplo como digitar -->
+
+
+        <label>Acessórios</label>
+        <div class="row">
+            <div class="column"> <!-- CSS para colocar lado a lado -->
+                <div>
+                    <input type="checkbox" value="Ar-condicionado" id="acessorios0" name="acessorios0" /> <!-- input tipo checkbox-->
+                    <label for="acessorios0">Ar-condicionado</label>
+                </div>
+                <div>
+                    <input type="checkbox" value="Direção Hidráulica" id="acessorios1" name="acessorios1" /> <!-- input tipo checkbox-->
+                    <label for="acessorios1">Direção Hidráulica</label>
+                </div>
+            </div>
+            <div class="column">
+                <div>
+                    <input type="checkbox" value="Multimídia" id="acessorios2" name="acessorios2" /> <!-- input tipo checkbox-->
+                    <label for="acessorios2">Multimídia</label>
+                </div>
+                <div>
+                    <input type="checkbox" value="Rodas Liga Leve" id="acessorios3" name="acessorios3" /> <!-- input tipo checkbox-->
+                    <label for="acessorios3">Rodas Liga Leve</label>
+                </div>
+            </div>
+        </div>
+
+        <label for="cambio">Tipo de Câmbio:</label> 
+        <select id="cambio" name="cambio" required>  <!-- select -->
+            <option value="" selected disabled hidden>Selecione...</option> <!-- opção selected disabled validação via JS -->
+            <option value="Automático">Automático</option>
+            <option value="Manual">Manual</option>
+            <option value="Automatizado">Automatizado</option>
+        </select>
+
+        <button type="submit" class="botao" id="salvar">💾 Salvar</button> <!-- botão para submeter o formulário -->
+    </form> <!-- Final do formulário -->
+
+    <footer> <!-- Rodapé inicio - usado css para modelar -->
+        <div>
+            <img src="images/logo.png" alt="2 D'OUROS">
+        </div>
+        <div>
+            <h3>2 D'OUROS</h3>
+            <p>MULTIMARCAS</p>
+            <p>Carros semi-novos</p>
+            <p>CNPJ: 62.823.257/0001-09</p>
+        </div>
+        <div>
+            <h3>Endereço:</h3>
+            <p>Rua Avenida Tiradentes, 1211</p>
+            <p>Itu - SP</p>
+            <p>CEP: 13309-640</p>
+        </div>
+        <div>
+            <h3>Contato:</h3>
+            <p>Telefone: (11) 4025-4593</p>
+            <p>Email: vendas@2douros.com.br</p>
+        </div>
+    </footer> <!-- Rodapé fina - usado css para modelar -->
+
+    <script src="js/script.js"></script> <!-- Carregando o JS do projeto -->
+
+</body>
+
+</html>
