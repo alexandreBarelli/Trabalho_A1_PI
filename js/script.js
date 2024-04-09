@@ -36,6 +36,7 @@ document.querySelectorAll('.ano').forEach(function (element) {
     });
 });
 
+
 const veiculo = new Veiculo();
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -127,9 +128,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 return; // Impede a execução do código abaixo se o câmbio não for selecionado
             }
 
-            // Validação do valor não deixar vazio
-            if (registro.valor === '') {
-                alert('Por favor, digite o valor.');
+            // Validação do valor não deixar vazio ou negativo
+            if (registro.valor === '' || registro.valor < 0) {
+                alert('Por favor, digite o valor positivo');
                 return; // Impede a execução do código abaixo se o câmbio não for selecionado
             }
 
@@ -147,14 +148,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // Validação do ano tem obrigatóriamente 4 numeros
             if (registro.ano.toString().length !== 4 || isNaN(registro.ano)) {
-                alert('Por favor, utilize 4 digitos.');
+                alert('Por favor, utilize 4 digitos no ano.');
                 return; // Impede a execução do código abaixo se o câmbio não for selecionado
             }
 
             // Validação do cadastro não deixar vazio
             if (registro.cadastro === '') {
-                alert('Por favor, selecione o data do cadastro.');
-                return; // Impede a execução do código abaixo se o câmbio não for selecionado
+                alert('Por favor, selecione a data do cadastro.');
+                return; // Impede a execução do código abaixo se o cadastro for vazio
             }
 
             veiculo.salva(registro);
